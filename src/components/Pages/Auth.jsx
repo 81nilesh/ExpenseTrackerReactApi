@@ -21,7 +21,7 @@ const Auth = () => {
             if (login) {
                 console.log('login being called')
                 setSendingReq(true);
-                const response = await axios.post(`https://crudcrud.com/api/22bef8e43d8b4f12b503b513a26d088c/users`, obj);
+                const response = await axios.post(`https://expense-tracker-66ed3-default-rtdb.firebaseio.com//users.json`, obj);
                 setSendingReq(false);
                 setAlertSeverity('success');
                 console.log(response)
@@ -33,7 +33,7 @@ const Auth = () => {
             else {
                 console.log('signup being called');
                 setSendingReq(true);
-                const response = await axios.post(`https://crudcrud.com/api/22bef8e43d8b4f12b503b513a26d088c/users`, obj);
+                const response = await axios.post(`https://expense-tracker-66ed3-default-rtdb.firebaseio.com//users.json`, obj);
                 setAlertSeverity('success');
                 setAlertMsg(response.data.msg);
                 setSendingReq(false);

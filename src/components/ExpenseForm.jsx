@@ -21,7 +21,7 @@ const ExpenseForm = (props) => {
             }
             amountRef.current.value = descriptionRef.current.value = categoryRef.current.value = "";
             const token = JSON.parse(localStorage.getItem('token'));
-            const response = await axios.post('http://localhost:3000/expenses/addExpense', obj, { headers: { "Authorization": token } });
+            const response = await axios.post('https://expense-tracker-66ed3-default-rtdb.firebaseio.com/addExpense.json', obj, { headers: { "Authorization": token } });
             setSeverity('success');
             setResMsg(response.data.msg);
             setOpenAlert(true);

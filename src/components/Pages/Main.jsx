@@ -13,7 +13,7 @@ const Main = () => {
     const getFromDB = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('token'));
-        const response = await axios.get('http://localhost:3000/expenses/getExpenses', { headers: { "Authorization": token } })
+        const response = await axios.get('https://expense-tracker-66ed3-default-rtdb.firebaseio.com//expenses/getExpenses', { headers: { "Authorization": token } })
         setExpenses(response.data.data);
         let sum = 0;
         response.data.data.forEach((item) => sum = sum + item.amount);
@@ -29,7 +29,7 @@ const Main = () => {
     e.preventDefault();
     try {
       const token = JSON.parse(localStorage.getItem('token'));
-      let response = await axios.get('http://localhost:3000/expenses/downloadCSV', { headers: { "Authorization": token } });
+      let response = await axios.get('https://expense-tracker-66ed3-default-rtdb.firebaseio.com/expenses/downloadCSV.json', { headers: { "Authorization": token } });
       const blob = new Blob([response.data], { type: 'text/csv' });
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
