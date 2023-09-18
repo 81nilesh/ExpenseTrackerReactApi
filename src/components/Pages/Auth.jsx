@@ -19,7 +19,7 @@ const Auth = () => {
     const AuthHandler = async (obj) => {
         try {
             if (login) {
-                console.log('login being call')
+                console.log('login being called')
                 setSendingReq(true);
                 const response = await axios.post(`https://expense-tracker-66ed3-default-rtdb.firebaseio.com//users.json`, obj);
                 setSendingReq(false);
