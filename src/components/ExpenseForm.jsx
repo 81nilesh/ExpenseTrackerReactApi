@@ -38,7 +38,7 @@ const ExpenseForm = (props) => {
             setOpenAlert(true);
             setTimeout(() => {
                 setOpenAlert(false);
-            }, 5000)
+            }, 5000);
         }
     }
     return (
