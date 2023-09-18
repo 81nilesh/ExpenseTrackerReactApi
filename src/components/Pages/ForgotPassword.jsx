@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { Alert } from '@mui/material';
 const ForgotPassword = () => {
@@ -25,7 +25,7 @@ const ForgotPassword = () => {
             }, 5000)
 
         } catch (error) {
-            console.log(error);
+            console.log(error)
             setSeverity('warning');
             setResMsg(error.response.data.msg);
             setOpenAlert(true);
@@ -38,7 +38,7 @@ const ForgotPassword = () => {
         <div>
             <div className=" border border-black max-w-lg mx-auto my-20 bg-white p-8 rounded-xl shadow shadow-slate-300">
                 {openAlert && <Alert severity={severity}>{resMsg}</Alert>}
-                <h1 className="text-4xl mt-3 font-medium">Reset password</h1>
+                <h1 className="text-4xl mt-3 font-medium">Reset Password</h1>
                 <p className="text-slate-500">Fill up the form to reset the password</p>
                 <form className="my-10" onSubmit={formSubmitHandler}>
                     <div className="flex flex-col space-y-5">
@@ -62,4 +62,4 @@ const ForgotPassword = () => {
     )
 }
 
-export default ForgotPassword
+export default ForgotPassword;
