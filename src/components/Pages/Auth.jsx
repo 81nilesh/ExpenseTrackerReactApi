@@ -76,7 +76,7 @@ const Auth = () => {
                 <div className=" bg-white p-5 flex flex-col justify-evenly">
                     {openalert && <Alert severity={alertSeverity}>{alertMsg}!</Alert>}
                     <form className="  min-h-[400px] flex flex-col justify-evenly md:min-h-[500px] md:min-w-[400px]" action="" onSubmit={formSubmitHandler}>
-                        <p className="font-serif text-4xl  tracking-[4px]">{login ? 'Login' : 'SignUp'}</p>
+                        <p className="font-serif text-4xl  tracking-[4px]">{login ? 'Login' : 'Sign Up'}</p>
                         <div className="flex flex-col py-3">
                             <label>Email :</label>
                             <input ref={emailRef} className="text-center border-b-4 p-2 border-gray-400" type="email"  ></input>
