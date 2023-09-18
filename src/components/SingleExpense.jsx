@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import axios from 'axios';
 import { GlobalContext } from './Context/gobalContext';
 
@@ -55,4 +55,4 @@ const SingleExpense = (props) => {
     )
 }
 
-export default SingleExpense
+export default SingleExpense;
