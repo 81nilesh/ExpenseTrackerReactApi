@@ -24,10 +24,10 @@ const Auth = () => {
                 const response = await axios.post(`https://expense-tracker-66ed3-default-rtdb.firebaseio.com//users.json`, obj);
                 setSendingReq(false);
                 setAlertSeverity('success');
-                console.log(response)
+                console.log(response);
                 setAlertMsg(response.data.msg);
                 localStorage.setItem('token', JSON.stringify(response.data.token));
-                window.location.href = '/main'
+                window.location.href = '/main';
 
             }
             else {
