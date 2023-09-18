@@ -32,7 +32,7 @@ const Header = () => {
           <button onClick={()=>{setIsDark((state)=>!state)}}>Toggle Theme</button>
         </div>
         <div className='border border-white p-2 rounded-lg cursor-pointer' onClick={logOutHandler}>
-          <p>Log Out</p>
+          <p>Log out</p>
         </div>
       </div>
     </div>
